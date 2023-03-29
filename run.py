@@ -1,9 +1,9 @@
-import gspread
-from google.oauth2.service_account import Credentials
+import time
 import random
 import os
-import time
 import textwrap
+import gspread
+from google.oauth2.service_account import Credentials
 import colorama
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
@@ -28,6 +28,14 @@ h_color = Fore.CYAN         # Hint Color
 e_color = Back.RED          # Error Message Color
 reset_all = Style.RESET_ALL  # Reset to normal
 
+
+def clear_board():
+    '''
+    Clears the terminal when needed
+    '''
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+
 def welcome_message():
     '''
     Display the welcome logo and message
@@ -38,6 +46,9 @@ def welcome_message():
     \__ \ \ V  V /| || '  \ | '  \ | || ' \ \__. |      | (_) || || || ||_ /
     |___/  \_/\_/ |_||_|_|_||_|_|_||_||_||_||___/        \__\_\ \_._||_|/__|
     ''' + Style.RESET_ALL)
+    time.sleep(3)
+
+    print()
 
     print(Style.BRIGHT + Fore.BLUE + Back.WHITE + r'''
         .-;'`  `'-.
@@ -58,5 +69,13 @@ def welcome_message():
     jgs        `\
                 (~^~_-~^-~^_~^~^-~^_~-^~_^~-^-~^~^_~^~-^~^~^~-^~_
                 ''' + Style.RESET_ALL)
+    time.sleep(3)
 
-    print(reset_all + 'Welcome to the swimming quiz!\n')
+    print()
+
+    print(Style.RESET_ALL + 'Welcome to the swimming quiz!\n')
+    print('Are you ready to test you knowledge about swimming?\n')
+    time.sleep(5)
+
+
+clear_board()
