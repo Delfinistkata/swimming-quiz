@@ -100,8 +100,7 @@ def new_game():
         correct_guesses += check_answer(questions.get(key), guess)
         num_question += 1
 
-
-show_score(correct_guesses, your_guesses)
+    show_score(correct_guesses, your_guesses)
 
 
 def check_answer(your_answer, guess):
@@ -132,13 +131,16 @@ def show_score(correct_guesses, your_guesses):
 
     print("ANSWERS: ", end="")
     for i in questions:
-        print(questions.get(i), end="")
+        print(questions.get(i), end=" ")
     print()
 
     print("YOUR GUESSES: ", end="")
     for i in choices:
-        print(i, end="")
+        print(i, end=" ")
     print()
+
+    score = int((correct_guesses/len(questions))*100)
+    print("Your final score is: "+str(score)+"%")
 
 # Questions for the quiz
 
