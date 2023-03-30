@@ -106,7 +106,8 @@ show_score(correct_guesses, your_guesses)
 
 def check_answer(your_answer, guess):
     '''
-    Checks if the selected answers are correct, and compares it to the right answers,
+    Checks if the selected answers are correct,
+    compares it to the right answers,
     if the answer is correct the user gets 1 point, if not then its 0
     '''
 
@@ -120,13 +121,27 @@ def check_answer(your_answer, guess):
 
 
 def show_score(correct_guesses, your_guesses):
+    '''
+    It shows the final results as the correct
+    answers and the choices of the user
+    '''
     print()
     print("FINAL RESULTS: ")
+    time.sleep(2)
     print()
 
+    print("ANSWERS: ", end="")
+    for i in questions:
+        print(questions.get(i), end="")
+    print()
 
+    print("YOUR GUESSES: ", end="")
+    for i in choices:
+        print(i, end="")
+    print()
 
 # Questions for the quiz
+
 
 questions = {
     "Which of the following wrods refers to a swimming style?: ": "C",
