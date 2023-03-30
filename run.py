@@ -78,10 +78,12 @@ def welcome_message():
     input("Press Enter to continue...")
 
 
+# Code from: https://www.youtube.com/watch?v=63nw00JqHo0
 def menu():
     '''
     A menu with three options for the player to choose from
     '''
+    print("Select one of the options from the menu: ")
     print("[1] Rules")
     print("[2] Play")
     print("[0] Quit")
@@ -90,41 +92,55 @@ def menu():
 menu()
 option = int(input("Enter your option here: "))
 
-while True:
-    try:
-        option = int(input("Enter your option here: "))
-        if option not in [1, 2, 0]:
-            raise ValueError("Invalid Option! Enter: 1, 2, or 0")
-        if option == 1:
-            rules = [
-                "The player is presented with a question and possible answers",
-                "The player answers by entering the correct letter.",
-                "If the player selects the correct answer, they earn a point.",
-                "If the answer is incorrect, no points are earned.",
-                "The game proceeds with new questions until all are answered.",
-                "At the end of the game, the player's score is displayed."
-            ]
-            for rule in rules:
-                for line in textwrap.wrap(rule, width=79):
-                    print(line)
-                time.sleep(2)
-        elif option == 2:
-            print("Play")
-        else:
-            print("Thank you for playing. See you soon!")
-            break
-    except ValueError as e:
-        print(e)
+while option != 0:
+    if option == 1:
+        print("Displaying rules..... \n")
+        time.sleep(4)
+        print("Please wait...")
+        time.sleep(2)
+        print()
+        rules = [
+            "The player is presented with a question and 4 answers.\n",
+            "The player will have a hint before answering.\n",
+            "The player answers by entering the correct letter.\n",
+            "If you select the correct answer, you earn a point.\n",
+            "If the answer is incorrect, no points are earned.\n",
+            "This continues until all questions are answered.\n",
+            "At the end of the game, the player's score is displayed.\n"
+        ]
+        for rule in rules:
+            print(rule)
+            time.sleep(3)
+    elif option == 2:
+        print("play now")
+        time.sleep(2)
+    else:
+        print("Invalid option! Try again: ")
+        time.sleep(1)
 
-
-def main_functions():
-    '''
-    Calls the main functions on the terminal
-    '''
-    clear_board()
-    welcome_message()
+    print()
     menu()
     option = int(input("Enter your option here: "))
 
+print("Thank you for playing! See you soon.")
 
-main_functions()
+
+# Questions for the quiz
+
+questions = {
+    "Which of the following wrods refers to a swimming style?: ": "C",
+    "How many strokes are performed during competitions?: ": "B",
+    "In a relay, how many swimmers are there in each team?: ": "A",
+    "At which age did Ian Thrope become the youngest world champion?: ": "A",
+    "Which stroke is considered to be the most difficult?: ": "C",
+    "Where is the headquarters of FINA located?: ": "B",
+    "What is the benefit of wearing a swim cap?: ": "B",
+    "What does IM stands for?: ": "B",
+    "Which is the slowest stroke?: ": "A",
+    "Who won titles in American, British, European and Olympic races?: ": "A",
+    "When did swimming first become part of the Olympic Summer Games?: ": "A",
+    "The freestyle was developed based on a swimming style in?: ": "B",
+    "How long is a lap in an Olympic-sized swimming pool?: ": "A",
+    "What is the only open water event in the Olympics?: ": "B",
+    "In swimming competitions, what's the limit for swimsuits on legs?: ": "B",
+}
