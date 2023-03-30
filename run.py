@@ -144,3 +144,23 @@ questions = {
     "What is the only open water event in the Olympics?: ": "B",
     "In swimming competitions, what's the limit for swimsuits on legs?: ": "B",
 }
+
+# Optional answers for the quiz
+
+choices = [
+    ["A. A pull", "B. A kick", "C. A stroke"],
+    ["A. 3", "B. 4", "C. 5"],
+    ["A. 4", "B. 3", "C. 5"],
+    ["A. 15", "B. 17", "C. 19"],
+    ["A. Breaststroke", "B. Backstroke", "C. Butterfly"],
+    ["A. Nice, France", "B. Lausanne, Switzerland", "C. Hamburg, Germany"],
+    ["A. To improve look", "B. To reduce drag", "C. To protect hair"],
+    ["A. International Master", "B. Individual Medley", "C. Internal Meeting"],
+    ["A. Breaststroke", "B. Backstroke", "C. Butterfly"],
+    ["A. David Wilkie", "B. John Hencken", "C. Gunnar Larsson"],
+    ["A. 1896", "B. 1926", "C. 1934"],
+    ["A. Fiji", "B. Solomon Islands", "C. Marshall Islands"],
+    ["A. 50m", "B. 75m", "C. 100m"],
+    ["A. 5km", "B. 10km", "C. 25km"],
+    ["A. Thighs", "B. Knees", "C. Ankles"],
+]
