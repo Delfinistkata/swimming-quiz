@@ -97,11 +97,33 @@ def new_game():
         guess = guess.upper()
         your_guesses.append(guess)
 
-        check_answer(questions.get(key), guess)
+        correct_guesses += check_answer(questions.get(key), guess)
         num_question += 1
 
 
-def check_answer()
+show_score(correct_guesses, your_guesses)
+
+
+def check_answer(your_answer, guess):
+    '''
+    Checks if the selected answers are correct, and compares it to the right answers,
+    if the answer is correct the user gets 1 point, if not then its 0
+    '''
+
+    if your_answer == guess:
+        time.sleep(2)
+        print(c_color + "Well Done! Correct!")
+        return 1
+    else:
+        print(w_color + "Wrong!")
+        return 0
+
+
+def show_score(correct_guesses, your_guesses):
+    print()
+    print("FINAL RESULTS: ")
+    print()
+
 
 
 # Questions for the quiz
