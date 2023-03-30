@@ -78,51 +78,30 @@ def welcome_message():
     input("Press Enter to continue...")
 
 
-# Code from: https://www.youtube.com/watch?v=63nw00JqHo0
-def menu():
+def new_game():
     '''
-    A menu with three options for the player to choose from
+    Starts a new game, displays each question in the game and the answers,
+    promps the user for the correct answer and stores the guesses of the users
     '''
-    print("Select one of the options from the menu: ")
-    print("[1] Rules")
-    print("[2] Play")
-    print("[0] Quit")
 
+    your_guesses = []
+    correct_guesses = 0
+    num_question = 1
 
-menu()
-option = int(input("Enter your option here: "))
-
-while option != 0:
-    if option == 1:
-        print("Displaying rules..... \n")
-        time.sleep(4)
-        print("Please wait...")
-        time.sleep(2)
+    for key in questions:
         print()
-        rules = [
-            "The player is presented with a question and 4 answers.\n",
-            "The player will have a hint before answering.\n",
-            "The player answers by entering the correct letter.\n",
-            "If you select the correct answer, you earn a point.\n",
-            "If the answer is incorrect, no points are earned.\n",
-            "This continues until all questions are answered.\n",
-            "At the end of the game, the player's score is displayed.\n"
-        ]
-        for rule in rules:
-            print(rule)
-            time.sleep(3)
-    elif option == 2:
-        print("play now")
-        time.sleep(2)
-    else:
-        print("Invalid option! Try again: ")
-        time.sleep(1)
+        print(key)
+        for i in choices[num_question-1]:
+            print(i)
+        guess = input("Enter here: ")
+        guess = guess.upper()
+        your_guesses.append(guess)
 
-    print()
-    menu()
-    option = int(input("Enter your option here: "))
+        check_answer(questions.get(key), guess)
+        num_question += 1
 
-print("Thank you for playing! See you soon.")
+
+def check_answer()
 
 
 # Questions for the quiz
@@ -164,3 +143,53 @@ choices = [
     ["A. 5km", "B. 10km", "C. 25km"],
     ["A. Thighs", "B. Knees", "C. Ankles"],
 ]
+
+
+# Code from: https://www.youtube.com/watch?v=63nw00JqHo0
+def menu():
+    '''
+    A menu with three options for the player to choose from
+    '''
+    print("Select one of the options from the menu: ")
+    print("[1] Rules")
+    print("[2] Play")
+    print("[0] Quit")
+
+
+menu()
+option = int(input("Enter your option here: "))
+
+while option != 0:
+    if option == 1:
+        print("Displaying rules.....\n")
+        time.sleep(4)
+        print("Please wait...")
+        time.sleep(2)
+        print()
+        rules = [
+            "The player is presented with a question and 4 answers.\n",
+            "The player will have a hint before answering.\n",
+            "The player answers by entering the correct letter.\n",
+            "If you select the correct answer, you earn a point.\n",
+            "If the answer is incorrect, no points are earned.\n",
+            "This continues until all questions are answered.\n",
+            "At the end of the game, the player's score is displayed.\n"
+        ]
+        for rule in rules:
+            print(rule)
+            time.sleep(3)
+    elif option == 2:
+        print("Loading your game..... \n")
+        time.sleep(5)
+        print("Please wait...")
+        time.sleep(2)
+        new_game()
+    else:
+        print("Invalid option! Try again: ")
+        time.sleep(1)
+
+    print()
+    menu()
+    option = int(input("Enter your option here: "))
+
+print("Thank you for playing! See you soon.")
