@@ -76,10 +76,13 @@ def welcome_message():
     print('Are you ready to test you knowledge about swimming?\n')
     input("Press Enter to continue...")
 
+# Code from: https://www.youtube.com/watch?v=yriw5Zh406s&t=3s
+
 
 def new_game():
     '''
     Starts a new game, displays each question in the game and the answers,
+    cleans the terminal after each question is asked and answered,
     promps the user for the correct answer and stores the guesses of the users
     '''
 
@@ -95,6 +98,16 @@ def new_game():
         guess = input("Enter here: ")
         guess = guess.upper()
         your_guesses.append(guess)
+
+        clear_board()
+        print()
+        print(key)
+        for i in choices[num_question-1]:
+            print(i)
+        time.sleep(3)
+        print(f"The correct answer is: {questions[key]}")
+        time.sleep(3)
+        print()
 
         correct_guesses += check_answer(questions.get(key), guess)
         num_question += 1
@@ -116,6 +129,9 @@ def check_answer(your_answer, guess):
     else:
         print(w_color + "Wrong!")
         return 0
+
+
+# Code from: https://www.youtube.com/watch?v=yriw5Zh406s&t=3s
 
 
 def show_score(correct_guesses, your_guesses):
@@ -154,6 +170,26 @@ def show_score(correct_guesses, your_guesses):
             "Don't worry, keep practicing and "
             "I'm sure you'll do better next time") + reset_all)
 
+    if play_another_game():
+        new_game()
+    else:
+        menu()
+
+
+def play_another_game():
+    '''
+    Asks the user if they want to play again after getting their results
+    and feedback on their performance in the game
+    '''
+
+    your_response = input("Do you want to try your luck again? (y or n): ")
+    your_response = your_response.upper()
+
+    if your_response == "Y" or your_response == "YES":
+        return True
+    else:
+        return False
+
 # Questions for the quiz
 
 
@@ -174,6 +210,8 @@ questions = {
     "What is the only open water event in the Olympics?: ": "B",
     "In swimming competitions, what's the limit for swimsuits on legs?: ": "B",
 }
+
+# Code from: https://www.w3schools.com/python/ref_random_shuffle.asp
 
 questions_list = list(questions.items())
 random.shuffle(questions_list)
@@ -234,10 +272,10 @@ while option != 0:
             print(rule)
             time.sleep(3)
     elif option == 2:
-        print("Loading your game..... \n")
+        print("Loading your quiz..... \n")
         time.sleep(5)
         print("Please wait...")
-        time.sleep(2)
+        time.sleep(3)
         new_game()
     else:
         print("Invalid option! Try again: ")
@@ -248,3 +286,8 @@ while option != 0:
     option = int(input("Enter your option here: "))
 
 print("Thank you for playing! See you soon.")
+
+while play_another_game():
+    play_another_game()
+
+print("Goodbye, see you soon!")
