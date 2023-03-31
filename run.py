@@ -248,10 +248,16 @@ def menu():
     '''
     A menu with three options for the player to choose from
     '''
-    print("Select one of the options from the menu: ")
-    print("[1] Rules")
-    print("[2] Play")
-    print("[0] Quit")
+    print("+-------------------------------------------+")
+    print("+------------------MENU---------------------+")
+    print("+-------------------------------------------+")
+    print(" | Select one of the options from the menu: |")
+    print("+-------------------------------------------+")
+    print()
+    print(" |                [1] Rules                 |")
+    print(" |                [2] Play                  |")
+    print(" |                [0] Quit                  |")
+    print()
 
 
 menu()
