@@ -1,7 +1,6 @@
 import time
 import random
 import os
-import textwrap
 import gspread
 from google.oauth2.service_account import Credentials
 import colorama
@@ -159,7 +158,7 @@ def show_score(correct_guesses, your_guesses):
 
 
 questions = {
-    "Which of the following wrods refers to a swimming style?: ": "C",
+    "Which of the following words refers to a swimming style?: ": "C",
     "How many strokes are performed during competitions?: ": "B",
     "In a relay, how many swimmers are there in each team?: ": "A",
     "At which age did Ian Thrope become the youngest world champion?: ": "A",
@@ -175,6 +174,10 @@ questions = {
     "What is the only open water event in the Olympics?: ": "B",
     "In swimming competitions, what's the limit for swimsuits on legs?: ": "B",
 }
+
+questions_list = list(questions.items())
+random.shuffle(questions_list)
+questions = dict(questions_list)
 
 # Optional answers for the quiz
 
