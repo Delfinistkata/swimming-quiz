@@ -135,12 +135,25 @@ def show_score(correct_guesses, your_guesses):
     print()
 
     print("YOUR GUESSES: ", end="")
-    for i in choices:
-        print(i, end=" ")
+    for guess in your_guesses:
+        print(guess, end=" ")
     print()
 
     score = int((correct_guesses/len(questions))*100)
     print("Your final score is: "+str(score)+"%")
+
+    if score == 100:
+        print(Fore.CYAN + ("WOW! You are a genius. Excellent") + reset_all)
+    elif score >= 70:
+        print(Fore.YELLOW + (
+            "Nice job! You have a good knowledge about swimming.") + reset_all)
+    elif score >= 40:
+        print(Fore.BLUE + ("Good effort! Try harder next time.") + reset_all)
+    else:
+        print(Fore.MAGENTA + (
+            "Unfortunately, you didn't do so well this time. "
+            "Don't worry, keep practicing and "
+            "I'm sure you'll do better next time") + reset_all)
 
 # Questions for the quiz
 
