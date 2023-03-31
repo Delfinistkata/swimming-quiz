@@ -74,7 +74,12 @@ def welcome_message():
 
     print(Style.RESET_ALL + 'Welcome to the swimming quiz!\n')
     print('Are you ready to test you knowledge about swimming?\n')
-    input("Press Enter to continue...")
+    print(input("Press Enter to continue..."))
+    clear_board()
+
+
+welcome_message()
+
 
 # Code from: https://www.youtube.com/watch?v=yriw5Zh406s&t=3s
 
@@ -213,9 +218,9 @@ questions = {
 
 # Code from: https://www.w3schools.com/python/ref_random_shuffle.asp
 
-questions_list = list(questions.items())
-random.shuffle(questions_list)
-questions = dict(questions_list)
+#questions_list = list(questions.items())
+#random.shuffle(questions_list)
+#questions = dict(questions_list)
 
 # Optional answers for the quiz
 
@@ -291,3 +296,11 @@ while play_another_game():
     play_another_game()
 
 print("Goodbye, see you soon!")
+
+
+def main():
+    '''
+    Calls all functions
+    '''
+    welcome_message()
+    new_game()
