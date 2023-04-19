@@ -29,8 +29,9 @@ def welcome_message():
     '''
     Display the welcome logo and message
     '''
+    global name
     print(Style.BRIGHT + Fore.BLUE + Back.WHITE + r'''
-    ___           _                _        __ _         ___         _    
+    ___           _                _        __ _         ___          _
     / __| _ __ __ (_) _ __   _ __  (_) _ _  / _` |       / _ \  _  _ (_) ___
     \__ \ \ V  V /| || '  \ | '  \ | || ' \ \__. |      | (_) || || || ||_ /
     |___/  \_/\_/ |_||_|_|_||_|_|_||_||_||_||___/        \__\_\ \_._||_|/__|
@@ -63,9 +64,16 @@ def welcome_message():
     print()
 
     print(Style.RESET_ALL + 'Welcome to the swimming quiz!\n')
+    print()
+
+    name = input('Please enter your name: ')
+
+    print()
     print('Are you ready to test you knowledge about swimming?\n')
+    print()
     print(input("Press Enter to continue..."))
     clear_board()
+    return name
 
 
 welcome_message()
@@ -107,7 +115,7 @@ def new_game():
         correct_guesses += check_answer(value, guess)
         num_question += 1
 
-    show_score(correct_guesses, your_guesses)
+    show_score(name, correct_guesses, your_guesses)
 
 
 def check_answer(your_answer, guess):
@@ -126,10 +134,26 @@ def check_answer(your_answer, guess):
         return 0
 
 
+def export_results_worksheet(data):
+    '''
+    Exporting the name and the score of the player
+    after each game to google sheets
+    '''
+    print("Updating the score worksheet...\n")
+    print()
+    time.sleep(3)
+    print("Please wait...\n")
+    time.sleep(2)
+    print()
+    total_score_worksheet = SHEET.worksheet("total_score")
+    total_score_worksheet.append_row(data)
+    print("Worksheet updated successfully!")
+
+
 # Code from: https://www.youtube.com/watch?v=yriw5Zh406s&t=3s
 
 
-def show_score(correct_guesses, your_guesses):
+def show_score(your_name, correct_guesses, your_guesses):
     '''
     It shows the final results as the correct
     answers and the choices of the user
@@ -155,6 +179,10 @@ def show_score(correct_guesses, your_guesses):
     if score == 100:
         print(Fore.CYAN + (
             "WOW! You are a genius. Excellent") + Style.RESET_ALL)
+    elif score >= 90:
+        print(Fore.GREEN + (
+            "Excellent! You have an outstanding knowledge of swimming.") +
+            Style.RESET_ALL)
     elif score >= 70:
         print(Fore.YELLOW + (
             "Nice job! You have a good knowledge about swimming.") +
@@ -167,7 +195,8 @@ def show_score(correct_guesses, your_guesses):
             "Unfortunately, you didn't do so well this time. "
             "Don't worry, keep practicing and "
             "I'm sure you'll do better next time") + Style.RESET_ALL)
-
+    data = [your_name, score]
+    export_results_worksheet(data)
     if play_another_game():
         clear_board()
         new_game()
