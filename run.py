@@ -1,5 +1,4 @@
 import time
-import random
 import os
 import gspread
 from google.oauth2.service_account import Credentials
@@ -18,15 +17,6 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('score_board')
 
-# Colors
-
-i_color = Fore.WHITE        # Input Color
-c_color = Fore.GREEN        # Correct Answer Color
-w_color = Fore.RED          # Wrong Answer Color
-h_color = Fore.CYAN         # Hint Color
-e_color = Back.RED          # Error Message Color
-reset_all = Style.RESET_ALL  # Reset to normal
-
 
 def clear_board():
     '''
@@ -40,7 +30,7 @@ def welcome_message():
     Display the welcome logo and message
     '''
     print(Style.BRIGHT + Fore.BLUE + Back.WHITE + r'''
-    ___           _                _        __ _         ___         _     
+    ___           _                _        __ _         ___         _    
     / __| _ __ __ (_) _ __   _ __  (_) _ _  / _` |       / _ \  _  _ (_) ___
     \__ \ \ V  V /| || '  \ | '  \ | || ' \ \__. |      | (_) || || || ||_ /
     |___/  \_/\_/ |_||_|_|_||_|_|_||_||_||_||___/        \__\_\ \_._||_|/__|
@@ -95,7 +85,7 @@ def new_game():
     correct_guesses = 0
     num_question = 1
 
-    for key in questions:
+    for key, value in questions.items():
         print()
         print(key)
         for i in choices[num_question-1]:
@@ -110,11 +100,11 @@ def new_game():
         for i in choices[num_question-1]:
             print(i)
         time.sleep(3)
-        print(f"The correct answer is: {questions[key]}")
+        print(f"The correct answer is: {value}")
         time.sleep(3)
         print()
 
-        correct_guesses += check_answer(questions.get(key), guess)
+        correct_guesses += check_answer(value, guess)
         num_question += 1
 
     show_score(correct_guesses, your_guesses)
@@ -129,10 +119,10 @@ def check_answer(your_answer, guess):
 
     if your_answer == guess:
         time.sleep(2)
-        print(c_color + "Well Done! Correct!")
+        print(Fore.GREEN + "Well Done! Correct!")
         return 1
     else:
-        print(w_color + "Wrong!")
+        print(Fore.RED + "Wrong!")
         return 0
 
 
@@ -149,7 +139,7 @@ def show_score(correct_guesses, your_guesses):
     time.sleep(2)
     print()
 
-    print("ANSWERS: ", end="")
+    print(Fore.GREEN + ("CORRECT ANSWERS: "), end="")
     for i in questions:
         print(questions.get(i), end=" ")
     print()
@@ -163,22 +153,26 @@ def show_score(correct_guesses, your_guesses):
     print("Your final score is: "+str(score)+"%")
 
     if score == 100:
-        print(Fore.CYAN + ("WOW! You are a genius. Excellent") + reset_all)
+        print(Fore.CYAN + (
+            "WOW! You are a genius. Excellent") + Style.RESET_ALL)
     elif score >= 70:
         print(Fore.YELLOW + (
-            "Nice job! You have a good knowledge about swimming.") + reset_all)
+            "Nice job! You have a good knowledge about swimming.") +
+            Style.RESET_ALL)
     elif score >= 40:
-        print(Fore.BLUE + ("Good effort! Try harder next time.") + reset_all)
+        print(Fore.BLUE + (
+            "Good effort! Try harder next time.") + Style.RESET_ALL)
     else:
         print(Fore.MAGENTA + (
             "Unfortunately, you didn't do so well this time. "
             "Don't worry, keep practicing and "
-            "I'm sure you'll do better next time") + reset_all)
+            "I'm sure you'll do better next time") + Style.RESET_ALL)
 
     if play_another_game():
+        clear_board()
         new_game()
     else:
-        menu()
+        clear_board()
 
 
 def play_another_game():
@@ -187,13 +181,14 @@ def play_another_game():
     and feedback on their performance in the game
     '''
 
-    your_response = input("Do you want to try your luck again? (y or n): ")
-    your_response = your_response.upper()
-
-    if your_response == "Y" or your_response == "YES":
-        return True
-    else:
-        return False
+    while True:
+        response = input("Do you want to play again? (Y/N): ")
+        if response.upper() == "Y":
+            return True
+        elif response.upper() == "N":
+            return False
+        else:
+            print("Invalid input. Please enter Y or N.")
 
 # Questions for the quiz
 
@@ -216,11 +211,6 @@ questions = {
     "In swimming competitions, what's the limit for swimsuits on legs?: ": "B",
 }
 
-# Code from: https://www.w3schools.com/python/ref_random_shuffle.asp
-
-#questions_list = list(questions.items())
-#random.shuffle(questions_list)
-#questions = dict(questions_list)
 
 # Optional answers for the quiz
 
