@@ -106,6 +106,11 @@ def new_game():
             print(i)
         guess = input("Enter here: ")
         guess = guess.upper()
+        while guess not in ["A", "B", "C"]:
+            print("Invalid option")
+            guess = input("Enter here: ")
+            guess = guess.upper()
+
         your_guesses.append(guess)
 
         clear_board()
@@ -245,8 +250,9 @@ def play_another_game():
     '''
 
     while True:
-        response = input("Do you want to play again? (Y/N): ")
+        response = input("Would you like to try your luck? (Y/N): ")
         if response.upper() == "Y":
+            menu()
             return True
         elif response.upper() == "N":
             return False
@@ -315,7 +321,12 @@ def menu():
 
 
 menu()
-option = int(input("Enter your option here: "))
+option = input("Enter your option here: ")
+while option not in ["1", "2", "3", "0"]:
+    print("Invalid input")
+    option = input("Enter your option here: ")
+
+option = int(option)
 clear_board()
 
 while option != 0:
