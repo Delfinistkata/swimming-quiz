@@ -139,6 +139,8 @@ def check_answer(your_answer, guess):
         print(Fore.RED + "Wrong!")
         return 0
 
+# Code based on Love Sandwiches project by CI
+
 
 def export_results_worksheet(data):
     '''
@@ -154,6 +156,32 @@ def export_results_worksheet(data):
     total_score_worksheet = SHEET.worksheet("total_score")
     total_score_worksheet.append_row(data)
     print("Worksheet updated successfully!")
+
+# Code based on Love Sandwiches project by CI
+
+
+def import_results_worksheet():
+    '''
+    Importing the names and the scores of top 5
+    players, starting from the highest score from
+    Google sheets
+    '''
+    total_score = SHEET.worksheet("total_score").get_all_values()
+    sorted_scores = sorted(
+        total_score[1:], key=lambda x: int(x[1]), reverse=True)[:5]
+
+    print()
+    print("+----------------------+-------------+")
+    print("|         Name         |   Score     |")
+    print("+----------------------+-------------+")
+
+    for player in sorted_scores:
+        print(f"| {player[0]:<20} |  {player[1]:<10} |")
+
+    print("+----------------------+-------------+")
+    print()
+    print(input("Press Enter to continue..."))
+    clear_board()
 
 
 # Code from: https://www.youtube.com/watch?v=yriw5Zh406s&t=3s
@@ -281,12 +309,14 @@ def menu():
     print()
     print(" |                [1] Rules                 |")
     print(" |                [2] Play                  |")
+    print(" |                [3] Leaderboard           |")
     print(" |                [0] Quit                  |")
     print()
 
 
 menu()
 option = int(input("Enter your option here: "))
+clear_board()
 
 while option != 0:
     if option == 1:
@@ -313,6 +343,13 @@ while option != 0:
         print("Please wait...")
         time.sleep(3)
         new_game()
+    elif option == 3:
+        print("Loading the leaderboard...\n")
+        time.sleep(5)
+        print()
+        print("One moment please...\n")
+        time.sleep(2)
+        import_results_worksheet()
     else:
         print("Invalid option! Try again: ")
         time.sleep(1)
