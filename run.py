@@ -1,3 +1,9 @@
+'''
+Import time to add pauses at certain points during the quiz,
+Import os for clearing screen,
+Import gspread for tracking user names and scores,
+Import colorama for colouring the text
+'''
 import time
 import os
 import gspread
