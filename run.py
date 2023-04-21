@@ -85,6 +85,29 @@ def welcome_message():
 welcome_message()
 
 
+def check_answer(your_answer, guess, show_correct_answer=True):
+    '''
+    Checks if the selected answers are correct,
+    compares it to the right answers,
+    if the answer is correct the user gets 1 point, if not then its 0
+    '''
+
+    if your_answer == guess:
+        print()
+        time.sleep(2)
+        print(Fore.GREEN + "Well Done! Correct!")
+        return 1
+    else:
+        print()
+        time.sleep(2)
+        print(Fore.RED + "Wrong!")
+        print()
+        if show_correct_answer:
+            time.sleep(2)
+            print(f"The correct answer is: {your_answer}")
+        return 0
+
+
 # Code from: https://www.youtube.com/watch?v=yriw5Zh406s&t=3s
 
 
@@ -118,31 +141,21 @@ def new_game():
         print(key)
         for i in choices[num_question-1]:
             print(i)
-        time.sleep(3)
-        print(f"The correct answer is: {value}")
-        time.sleep(3)
+        correct_guesses += check_answer(
+            value, guess, show_correct_answer=False)
+        print()
+        clear_board()
+        print()
+        print(key)
+        for i in choices[num_question-1]:
+            print(i)
+        correct_guesses += check_answer(value, guess, show_correct_answer=True)
         print()
 
-        correct_guesses += check_answer(value, guess)
         num_question += 1
 
     show_score(name, correct_guesses, your_guesses)
 
-
-def check_answer(your_answer, guess):
-    '''
-    Checks if the selected answers are correct,
-    compares it to the right answers,
-    if the answer is correct the user gets 1 point, if not then its 0
-    '''
-
-    if your_answer == guess:
-        time.sleep(2)
-        print(Fore.GREEN + "Well Done! Correct!")
-        return 1
-    else:
-        print(Fore.RED + "Wrong!")
-        return 0
 
 # Code based on Love Sandwiches project by CI
 
@@ -176,6 +189,8 @@ def import_results_worksheet():
         total_score[1:], key=lambda x: int(x[1]), reverse=True)[:5]
 
     print()
+    print("+------------------------------------+")
+    print("|             TOP 5 SCORES           |")
     print("+----------------------+-------------+")
     print("|         Name         |   Score     |")
     print("+----------------------+-------------+")
@@ -185,7 +200,10 @@ def import_results_worksheet():
 
     print("+----------------------+-------------+")
     print()
-    print(input("Press Enter to continue..."))
+    enter = input("Press Enter to continue...")
+    while enter not in ['']:
+        print("Invalid input")
+        enter = input("Press Enter to continue...")
     clear_board()
 
 
@@ -250,10 +268,11 @@ def play_another_game():
     '''
 
     while True:
-        response = input("Would you like to try your luck? (Y/N): ")
+        response = input("Would you like to try your luck again? (Y/N): ")
         if response.upper() == "Y":
+            clear_board()
             menu()
-            return True
+            response = input("Enter your option here: ")
         elif response.upper() == "N":
             return False
         else:
@@ -308,15 +327,17 @@ def menu():
     A menu with three options for the player to choose from
     '''
     print("+-------------------------------------------+")
-    print("+------------------MENU---------------------+")
+    print("|                  MENU                     |")
     print("+-------------------------------------------+")
-    print(" | Select one of the options from the menu: |")
+    print("| Select one of the options from the menu:  |")
     print("+-------------------------------------------+")
-    print()
-    print(" |                [1] Rules                 |")
-    print(" |                [2] Play                  |")
-    print(" |                [3] Leaderboard           |")
-    print(" |                [0] Quit                  |")
+    print("|                                           |")
+    print("|                [1] Rules                  |")
+    print("|                [2] Play                   |")
+    print("|                [3] Leaderboard            |")
+    print("|                [0] Quit                   |")
+    print("|                                           |")
+    print("+-------------------------------------------+")
     print()
 
 
@@ -337,8 +358,7 @@ while option != 0:
         time.sleep(2)
         print()
         rules = [
-            "The player is presented with a question and 4 answers.\n",
-            "The player will have a hint before answering.\n",
+            "The player is presented with a question and 3 answers.\n",
             "The player answers by entering the correct letter.\n",
             "If you select the correct answer, you earn a point.\n",
             "If the answer is incorrect, no points are earned.\n",
@@ -348,6 +368,11 @@ while option != 0:
         for rule in rules:
             print(rule)
             time.sleep(3)
+        enter_rules = input("Press Enter to continue...")
+        while enter_rules not in ['']:
+            print("Invalid input")
+            enter_rules = input("Press Enter to continue...")
+        clear_board()
     elif option == 2:
         print("Loading your quiz..... \n")
         time.sleep(5)
@@ -368,6 +393,7 @@ while option != 0:
     print()
     menu()
     option = int(input("Enter your option here: "))
+    clear_board()
 
 print("Thank you for playing! See you soon.")
 
