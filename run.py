@@ -346,7 +346,6 @@ option = input("Enter your option here: ")
 while option not in ["1", "2", "3", "0"]:
     print("Invalid input")
     option = input("Enter your option here: ")
-
 option = int(option)
 clear_board()
 
@@ -392,8 +391,18 @@ while option != 0:
 
     print()
     menu()
-    option = int(input("Enter your option here: "))
-    clear_board()
+    while True:
+        try:
+            option = int(input("Enter your option here: "))
+            clear_board()
+            if option not in [1, 2, 3, 0]:
+                print("Invalid input! Try again.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input! Try again.")
+            continue
+clear_board()
 
 print("Thank you for playing! See you soon.")
 
