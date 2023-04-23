@@ -66,18 +66,22 @@ def welcome_message():
                 (~^~_-~^-~^_~^~^-~^_~-^~_^~-^-~^~^_~^~-^~^~^~-^~_
                 ''' + Style.RESET_ALL)
     time.sleep(3)
-
     print()
-
     print(Style.RESET_ALL + 'Welcome to the swimming quiz!\n')
     print()
-
-    name = input('Please enter your name: ')
-
+    while True:
+        name = input('Please enter your name: ')
+        if name:
+            break
+        else:
+            print('Name cannot be empty. Please enter your name.')
     print()
     print('Are you ready to test you knowledge about swimming?\n')
     print()
-    print(input("Press Enter to continue..."))
+    enter_to_play = input("Press Enter to continue...")
+    while enter_to_play not in ['']:
+        print("Invalid input")
+        enter_to_play = input("Press Enter to continue...")
     clear_board()
     return name
 
