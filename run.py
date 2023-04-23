@@ -23,6 +23,8 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('score_board')
 
+NAME = ''
+
 
 def clear_board():
     '''
@@ -35,7 +37,7 @@ def welcome_message():
     '''
     Display the welcome logo and message
     '''
-    global name
+    global NAME
     print(Style.BRIGHT + Fore.BLUE + Back.WHITE + r'''
     ___           _                _        __ _         ___          _
     / __| _ __ __ (_) _ __   _ __  (_) _ _  / _` |       / _ \  _  _ (_) ___
@@ -70,8 +72,8 @@ def welcome_message():
     print(Style.RESET_ALL + 'Welcome to the swimming quiz!\n')
     print()
     while True:
-        name = input('Please enter your name: ')
-        if name:
+        NAME = input('Please enter your name: ')
+        if NAME:
             break
         else:
             print('Name cannot be empty. Please enter your name.')
@@ -83,7 +85,7 @@ def welcome_message():
         print("Invalid input")
         enter_to_play = input("Press Enter to continue...")
     clear_board()
-    return name
+    return NAME
 
 
 welcome_message()
@@ -158,7 +160,7 @@ def new_game():
 
         num_question += 1
 
-    show_score(name, correct_guesses, your_guesses)
+    show_score(NAME, correct_guesses, your_guesses)
 
 
 # Code based on Love Sandwiches project by CI
@@ -229,7 +231,7 @@ def show_score(your_name, correct_guesses, your_guesses):
         print(questions.get(i), end=" ")
     print()
 
-    print("YOUR GUESSES: ", end="")
+    print("YOUR GUESSES:    ", end="")
     for guess in your_guesses:
         print(guess, end=" ")
     print()
