@@ -141,20 +141,10 @@ def new_game():
             guess = guess.upper()
 
         your_guesses.append(guess)
-
         clear_board()
         print()
         print(key)
-        for i in choices[num_question-1]:
-            print(i)
-        correct_guesses += check_answer(
-            value, guess, show_correct_answer=False)
         print()
-        clear_board()
-        print()
-        print(key)
-        for i in choices[num_question-1]:
-            print(i)
         correct_guesses += check_answer(value, guess, show_correct_answer=True)
         print()
 
@@ -262,6 +252,7 @@ def show_score(your_name, correct_guesses, your_guesses):
     export_results_worksheet(data)
     if play_another_game():
         clear_board()
+        menu()
         new_game()
     else:
         clear_board()
