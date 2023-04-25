@@ -139,7 +139,6 @@ def new_game():
             print("Invalid option")
             guess = input("Enter here:\n")
             guess = guess.upper()
-
         your_guesses.append(guess)
         clear_board()
         print()
@@ -147,10 +146,13 @@ def new_game():
         print()
         correct_guesses += check_answer(value, guess, show_correct_answer=True)
         print()
-
         num_question += 1
-
     show_score(NAME, correct_guesses, your_guesses)
+    if play_another_game():
+        clear_board()
+        main(True)
+    else:
+        main(False)
 
 
 # Code based on Love Sandwiches project by CI
@@ -250,12 +252,6 @@ def show_score(your_name, correct_guesses, your_guesses):
             "I'm sure you'll do better next time") + Style.RESET_ALL)
     data = [your_name, score]
     export_results_worksheet(data)
-    if play_another_game():
-        clear_board()
-        menu()
-        new_game()
-    else:
-        clear_board()
 
 
 def play_another_game():
@@ -264,12 +260,10 @@ def play_another_game():
     and feedback on their performance in the game
     '''
 
+    response = input("Would you like to try your luck again? (Y/N): ")
     while True:
-        response = input("Would you like to try your luck again? (Y/N):\n")
         if response.upper() == "Y":
-            clear_board()
-            menu()
-            response = input("Enter your option here:\n")
+            return True
         elif response.upper() == "N":
             return False
         else:
@@ -338,80 +332,70 @@ def menu():
     print()
 
 
-menu()
-option = input("Enter your option here:\n")
-while option not in ["1", "2", "3", "0"]:
-    print("Invalid input")
-    option = input("Enter your option here:\n")
-option = int(option)
-clear_board()
-
-while option != 0:
-    if option == 1:
-        print("Displaying rules.....\n")
-        time.sleep(4)
-        print("Please wait...")
-        time.sleep(2)
-        print()
-        rules = [
-            "The player is presented with a question and 3 answers.\n",
-            "The player answers by entering the correct letter.\n",
-            "If you select the correct answer, you earn a point.\n",
-            "If the answer is incorrect, no points are earned.\n",
-            "This continues until all questions are answered.\n",
-            "At the end of the game, the player's score is displayed.\n"
-        ]
-        for rule in rules:
-            print(rule)
-            time.sleep(3)
-        enter_rules = input("Press Enter to continue...\n")
-        while enter_rules not in ['']:
+def main(show_menu):
+    '''
+    Displays a menu of options for the user to choose from
+    and executes the corresponding functionality based on the user's choice.
+    '''
+    if show_menu:
+        menu()
+        option = input("Enter your option here: ")
+        print(option)
+        while option not in ["1", "2", "3", "0"]:
             print("Invalid input")
-            enter_rules = input("Press Enter to continue...\n")
+            option = input("Enter your option here: ")
+        option = int(option)
         clear_board()
-    elif option == 2:
-        print("Loading your quiz..... \n")
-        time.sleep(5)
-        print("Please wait...")
-        time.sleep(3)
-        new_game()
-    elif option == 3:
-        print("Loading the leaderboard...\n")
-        time.sleep(5)
-        print()
-        print("One moment please...\n")
-        time.sleep(2)
-        import_results_worksheet()
+        while option >= 0:
+            if option == 1:
+                print("Displaying rules.....\n")
+                time.sleep(4)
+                print("Please wait...")
+                time.sleep(2)
+                print()
+                rules = [
+                    "The player is presented with a question and 3 answers.\n",
+                    "The player answers by entering the correct letter.\n",
+                    "If you select the correct answer, you earn a point.\n",
+                    "If the answer is incorrect, no points are earned.\n",
+                    "This continues until all questions are answered.\n",
+                    "At the end of the game,the player's score is displayed.\n"
+                    ]
+                for rule in rules:
+                    print(rule)
+                    time.sleep(3)
+                enter_rules = input("Press Enter to continue...")
+                while enter_rules not in ['']:
+                    print("Invalid input")
+                    enter_rules = input("Press Enter to continue...")
+                clear_board()
+                main(True)
+                break
+            if option == 2:
+                print("Loading your quiz..... \n")
+                time.sleep(5)
+                print("Please wait...")
+                time.sleep(3)
+                new_game()
+                break
+            if option == 3:
+                print("Loading the leaderboard...\n")
+                time.sleep(5)
+                print()
+                print("One moment please...\n")
+                time.sleep(2)
+                import_results_worksheet()
+                main(True)
+                break
+            if option == 0:
+                print("Goodbye, see you soon!")
+                break
+            else:
+                print("Invalid option! Try again: ")
+                time.sleep(1)
+        option = 0
     else:
-        print("Invalid option! Try again:\n")
-        time.sleep(1)
-
-    print()
-    menu()
-    while True:
-        try:
-            option = int(input("Enter your option here:\n"))
-            clear_board()
-            if option not in [1, 2, 3, 0]:
-                print("Invalid input! Try again.")
-                continue
-            break
-        except ValueError:
-            print("Invalid input! Try again.")
-            continue
-clear_board()
-
-print("Thank you for playing! See you soon.")
-
-while play_another_game():
-    play_another_game()
-
-print("Goodbye, see you soon!")
+        print("Thank you for playing! See you soon.")
 
 
-def main():
-    '''
-    Calls all functions
-    '''
-    welcome_message()
-    new_game()
+main(True)
