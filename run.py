@@ -72,7 +72,7 @@ def welcome_message():
     print(Style.RESET_ALL + 'Welcome to the swimming quiz!\n')
     print()
     while True:
-        NAME = input('Please enter your name: ')
+        NAME = input('Please enter your name:\n')
         if NAME:
             break
         else:
@@ -80,10 +80,10 @@ def welcome_message():
     print()
     print('Are you ready to test you knowledge about swimming?\n')
     print()
-    enter_to_play = input("Press Enter to continue...")
+    enter_to_play = input("Press Enter to continue...\n")
     while enter_to_play not in ['']:
         print("Invalid input")
-        enter_to_play = input("Press Enter to continue...")
+        enter_to_play = input("Press Enter to continue...\n")
     clear_board()
     return NAME
 
@@ -133,11 +133,11 @@ def new_game():
         print(key)
         for i in choices[num_question-1]:
             print(i)
-        guess = input("Enter here: ")
+        guess = input("Enter here:\n")
         guess = guess.upper()
         while guess not in ["A", "B", "C"]:
             print("Invalid option")
-            guess = input("Enter here: ")
+            guess = input("Enter here:\n")
             guess = guess.upper()
 
         your_guesses.append(guess)
@@ -196,10 +196,10 @@ def import_results_worksheet():
 
     print("+----------------------+-------------+")
     print()
-    enter = input("Press Enter to continue...")
+    enter = input("Press Enter to continue...\n")
     while enter not in ['']:
         print("Invalid input")
-        enter = input("Press Enter to continue...")
+        enter = input("Press Enter to continue...\n")
     clear_board()
 
 
@@ -265,11 +265,11 @@ def play_another_game():
     '''
 
     while True:
-        response = input("Would you like to try your luck again? (Y/N): ")
+        response = input("Would you like to try your luck again? (Y/N):\n")
         if response.upper() == "Y":
             clear_board()
             menu()
-            response = input("Enter your option here: ")
+            response = input("Enter your option here:\n")
         elif response.upper() == "N":
             return False
         else:
@@ -339,10 +339,10 @@ def menu():
 
 
 menu()
-option = input("Enter your option here: ")
+option = input("Enter your option here:\n")
 while option not in ["1", "2", "3", "0"]:
     print("Invalid input")
-    option = input("Enter your option here: ")
+    option = input("Enter your option here:\n")
 option = int(option)
 clear_board()
 
@@ -364,10 +364,10 @@ while option != 0:
         for rule in rules:
             print(rule)
             time.sleep(3)
-        enter_rules = input("Press Enter to continue...")
+        enter_rules = input("Press Enter to continue...\n")
         while enter_rules not in ['']:
             print("Invalid input")
-            enter_rules = input("Press Enter to continue...")
+            enter_rules = input("Press Enter to continue...\n")
         clear_board()
     elif option == 2:
         print("Loading your quiz..... \n")
@@ -383,14 +383,14 @@ while option != 0:
         time.sleep(2)
         import_results_worksheet()
     else:
-        print("Invalid option! Try again: ")
+        print("Invalid option! Try again:\n")
         time.sleep(1)
 
     print()
     menu()
     while True:
         try:
-            option = int(input("Enter your option here: "))
+            option = int(input("Enter your option here:\n"))
             clear_board()
             if option not in [1, 2, 3, 0]:
                 print("Invalid input! Try again.")
