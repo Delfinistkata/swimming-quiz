@@ -8,13 +8,21 @@ The swimming quiz is a test of knowledge and proficiency in various aspects of s
 <br>
 <br>
 
-## Table of Contents
+# Table of Contents
 1. [User Experience (UX)](#user-experience-UX)
     1. [Project Goals](#project-goals)
     2. [User Stories](#user-stories)
     3. [Color Scheme](#color-scheme)
     4. [Flowchart](#flowchart)
 2. [Features](#features)
+    1. [Welcome Message and User Input](#welcome-message-and-user-input)
+    2. [Menu](#menu)
+    3. [Results](#results)
+3. [Technologies Used](#technologies-used)
+    1. [Language Used](#language-used)
+    2. [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
+
+
 
 <br>
 <br>
@@ -179,8 +187,11 @@ As shown in the flowchart, the original order of some functions has been changed
 - The correct answers of the game are shown.
 - The user gets a feedback message at the end as well.
 - Depending on the % that the user got, the colour of the feedback message changes.
-- After the results, the score and the name of the user is exported to Google worksheet and a message to acknowledge this is displayed.
-- Lastly, there is a question that asks the user if they would like to play another game. If they say "Y", it brings them back to the menu and they can select whatever option they like. If they say "N", a goodbye message is displayed.
+- After the results, the score and the name of the user is exported to Google worksheet 
+    and a message to acknowledge this is displayed.
+- Lastly, there is a question that asks the user if they would like to play another game. 
+    If they say "Y", it brings them back to the menu and they can select whatever option they like. 
+    If they say "N", a goodbye message is displayed.
 
 <br>
 <br>
@@ -208,3 +219,32 @@ As shown in the flowchart, the original order of some functions has been changed
 <br>
 
 ![question](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682531313/Project%203%20Swimming%20Quiz/another_game_fnflzl.png)
+
+## Technologies Used
+
+<br>
+<br>
+
+### Language Used
+
+<br>
+
+* [Python3](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+<br>
+
+### Frameworks, Libraries and Programs Used
+
+<br>
+
+* [GitPod](https://gitpod.io/) was used for writing code, committing, and then pushing to GitHub.
+
+* [GitHub](https://github.com/) was used to store the project after pushing.
+
+* [Heroku](https://id.heroku.com/) was used to deploy the application.
+
+* [PEP8 online check](http://pep8online.com/) was used to validate the Python code.
+
+* [Colorama](https://pypi.org/project/colorama/) library was used to apply color to the terminal text.
+
+* [Ascrii Art](https://www.asciiart.eu/) was used for the welcome logo
