@@ -78,13 +78,13 @@ def welcome_message():
         if NAME:
             break
         else:
-            print('Name cannot be empty. Please enter your name.')
+            print(Fore.RED + ('Name cannot be empty.'))
     print()
     print('Are you ready to test you knowledge about swimming?\n')
     print()
     enter_to_play = input("Press Enter to continue...\n")
     while enter_to_play not in ['']:
-        print("Invalid input")
+        print(Fore.RED + ("Invalid input"))
         enter_to_play = input("Press Enter to continue...\n")
     clear_board()
     return NAME
@@ -138,7 +138,7 @@ def new_game():
         guess = input("Enter here:\n")
         guess = guess.upper()
         while guess not in ["A", "B", "C"]:
-            print("Invalid option")
+            print(Fore.RED + ("Invalid option"))
             guess = input("Enter here:\n")
             guess = guess.upper()
         your_guesses.append(guess)
@@ -173,7 +173,7 @@ def export_results_worksheet(data):
     print()
     total_score_worksheet = SHEET.worksheet("total_score")
     total_score_worksheet.append_row(data)
-    print("Worksheet updated successfully!")
+    print(Fore.GREEN + ("Worksheet updated successfully!"))
 
 # Code based on Love Sandwiches project by CI
 
@@ -202,7 +202,7 @@ def import_results_worksheet():
     print()
     enter = input("Press Enter to continue...\n")
     while enter not in ['']:
-        print("Invalid input")
+        print(Fore.RED + ("Invalid input"))
         enter = input("Press Enter to continue...\n")
     clear_board()
 
@@ -234,24 +234,20 @@ def show_score(your_name, correct_guesses, your_guesses):
     print("Your final score is: "+str(score)+"%")
 
     if score == 100:
-        print(Fore.CYAN + (
-            "WOW! You are a genius. Excellent") + Style.RESET_ALL)
+        print(Fore.CYAN + ("WOW! You are a genius. Excellent"))
     elif score >= 90:
         print(Fore.GREEN + (
-            "Excellent! You have an outstanding knowledge of swimming.") +
-            Style.RESET_ALL)
+            "Excellent! You have an outstanding knowledge of swimming."))
     elif score >= 70:
         print(Fore.YELLOW + (
-            "Nice job! You have a good knowledge about swimming.") +
-            Style.RESET_ALL)
+            "Nice job! You have a good knowledge about swimming."))
     elif score >= 40:
-        print(Fore.BLUE + (
-            "Good effort! Try harder next time.") + Style.RESET_ALL)
+        print(Fore.BLUE + ("Good effort! Try harder next time."))
     else:
         print(Fore.MAGENTA + (
             "Unfortunately, you didn't do so well this time. "
             "Don't worry, keep practicing and "
-            "I'm sure you'll do better next time") + Style.RESET_ALL)
+            "I'm sure you'll do better next time"))
     data = [your_name, score]
     export_results_worksheet(data)
 
@@ -262,14 +258,17 @@ def play_another_game():
     and feedback on their performance in the game
     '''
 
-    response = input("Would you like to try your luck again? (Y/N): ")
     while True:
-        if response.upper() == "Y":
-            return True
-        elif response.upper() == "N":
-            return False
-        else:
-            print("Invalid input. Please enter Y or N.")
+        try:
+            response = input("Would you like to try your luck again? (Y/N): ")
+            if response.upper() == "Y":
+                return True
+            elif response.upper() == "N":
+                return False
+            else:
+                raise ValueError("Invalid input. Please enter Y or N.")
+        except ValueError as error:
+            print(Fore.RED + str(error))
 
 # Questions for the quiz
 
@@ -345,9 +344,8 @@ def main(show_menu):
     if show_menu:
         menu()
         option = input("Enter your option here: ")
-        print(option)
         while option not in ["1", "2", "3", "0"]:
-            print("Invalid input")
+            print(Fore.RED + ("Invalid option"))
             option = input("Enter your option here: ")
         option = int(option)
         clear_board()
@@ -371,7 +369,7 @@ def main(show_menu):
                     time.sleep(3)
                 enter_rules = input("Press Enter to continue...")
                 while enter_rules not in ['']:
-                    print("Invalid input")
+                    print(Fore.RED + ("Invalid input"))
                     enter_rules = input("Press Enter to continue...")
                 clear_board()
                 main(True)
@@ -396,7 +394,7 @@ def main(show_menu):
                 print("Goodbye, see you soon!")
                 break
             else:
-                print("Invalid option! Try again: ")
+                print(Fore.RED + ("Invalid option! Try again: "))
                 time.sleep(1)
         option = 0
     else:
