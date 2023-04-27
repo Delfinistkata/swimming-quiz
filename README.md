@@ -21,6 +21,10 @@ The swimming quiz is a test of knowledge and proficiency in various aspects of s
 3. [Technologies Used](#technologies-used)
     1. [Language Used](#language-used)
     2. [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
+4. [Testing](#testing)
+    1. [Testing User Stories](#testing-user-stories)
+    2. [Code Validation](#code-validation)
+    3. [Manual Testing](#manual-testing)
 
 
 
@@ -243,8 +247,95 @@ As shown in the flowchart, the original order of some functions has been changed
 
 * [Heroku](https://id.heroku.com/) was used to deploy the application.
 
-* [PEP8 online check](http://pep8online.com/) was used to validate the Python code.
+* [PEP8 online check](https://pep8ci.herokuapp.com/) was used to validate the Python code.
 
 * [Colorama](https://pypi.org/project/colorama/) library was used to apply color to the terminal text.
 
 * [Ascrii Art](https://www.asciiart.eu/) was used for the welcome logo
+
+<br>
+<br>
+
+## Testing
+
+<br>
+
+### Testing User Stories
+
+<br>
+
+* As a user, I want to receive information about the main objective of the program.
+
+    - Information about the program is presented in the welcome message.
+    - Further information about the quiz can be found under option 1 (rules).
+
+<br>
+
+* As a user, I want to easily understand what input is needed on each step.
+
+    - Input messages are being provided with detailed information on what the input needs to be.
+
+<br>
+
+* As a user, I want to receive clear feedback in case I provide the wrong input.
+
+    - Error messages are provided explaining what is wrong with the input provided in case the wrong input is entered.
+
+<br>
+
+* As a user, I want the results to be displayed in a clear way and to be easy to understand.
+
+    - Option 3 (Leaderboard) provides the name and the results from the quiz for the top 5 people only.
+
+<br>
+
+* As a user, I want to be able to easily repeat the quiz if I want to try again.
+
+    - At the end of the quiz, the user has the option to say yes if they would like to play again. Once they reply with Yes, it will bring them back to the menu and they can select from the 4 options available.
+
+<br>
+<br>
+
+### Code Validation
+
+<br>
+
+The [PEP8 online check](https://pep8ci.herokuapp.com/) was used throughout the development process to validate the Python code for PEP8 requirements. No errors were found after the last test.
+
+<br>
+
+![PEP8 Code Validation](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682598758/Python_Linter_results_o0rlya.png)
+
+<br>
+<br>
+
+### Manual Testing
+
+<br>
+
+<table>
+    <tr>
+        <th>Feature</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td>Name Input</td>
+        <td>Validate if value is empty</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Enter Input</td>
+        <td>Validate if value is a empty</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Question Input</td>
+        <td>Validate if invalid value</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Restart the game</td>
+        <td>Keep running or exit the program</td>
+        <td>Pass</td>
+    </tr>
