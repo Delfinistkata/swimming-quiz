@@ -27,8 +27,7 @@ The swimming quiz is a test of knowledge and proficiency in various aspects of s
     3. [Manual Testing](#manual-testing)
 5. [Deployment](#deployment)
 6. [Credits](#credits)
-
-
+7. [Acknowledgements](#acknowledgements)
 
 <br>
 <br>
@@ -50,6 +49,10 @@ The swimming quiz is a test of knowledge and proficiency in various aspects of s
 * Accurately keep track of and display the user’s score clearly at the end of the quiz. 
 
 <br>
+
+**[Back to top ⇧](#swimming-quiz)**
+
+<br>
 <br>
 
 ### User Stories
@@ -61,6 +64,10 @@ The swimming quiz is a test of knowledge and proficiency in various aspects of s
 * As a user, I want to receive clear feedback in case I provide the wrong input.
 * As a user, I want the results to be displayed in a clear way and to be easy to understand.
 * As a user, I want to be able to easily repeat the quiz if I want to try again.
+
+<br>
+
+**[Back to top ⇧](#swimming-quiz)**
 
 <br>
 <br>
@@ -80,6 +87,10 @@ in order to make it more intuitive and easier to read.
     The colours used for the different messages are: Cyan, Green, Yellow, Blue and Magenta.
 
 <br>
+
+**[Back to top ⇧](#swimming-quiz)**
+
+<br>
 <br>
 
 ### Flowchart
@@ -88,9 +99,17 @@ in order to make it more intuitive and easier to read.
 
 [Lucid](https://www.lucid.app/) has been used to create a simple flowchart of the expected flow of logic through the programme from start to finish. This helped me to visualise the structure of the code and what functions may be needed. 
 
-![Swimming Quiz Flowchart] (https://res.cloudinary.com/doyc0uqcs/image/upload/v1682527380/Project%203%20Swimming%20Quiz/lucid_chart_ytjq15.png)
+<br>
+
+![Flowchart](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682527380/Project%203%20Swimming%20Quiz/lucid_chart_ytjq15.png)
+
+<br>
 
 As shown in the flowchart, the original order of some functions has been changed during the development process in order to follow a more intuitive logic and sequence of events but the main idea behind the process is still the same.
+
+<br>
+
+**[Back to top ⇧](#swimming-quiz)**
 
 <br>
 <br>
@@ -118,6 +137,10 @@ As shown in the flowchart, the original order of some functions has been changed
 - Welcome message and user input for their name to continue to the main.
 
 ![message](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682529613/Project%203%20Swimming%20Quiz/welcome_message_and_name_glrqzg.png)
+
+<br>
+
+**[Back to top ⇧](#swimming-quiz)**
 
 <br>
 <br>
@@ -181,6 +204,10 @@ As shown in the flowchart, the original order of some functions has been changed
 ![option0](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682530755/Project%203%20Swimming%20Quiz/press_0_rjxllm.png)
 
 <br>
+
+**[Back to top ⇧](#swimming-quiz)**
+
+<br>
 <br>
 
 ### Results
@@ -226,6 +253,13 @@ As shown in the flowchart, the original order of some functions has been changed
 
 ![question](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682531313/Project%203%20Swimming%20Quiz/another_game_fnflzl.png)
 
+<br>
+
+**[Back to top ⇧](#swimming-quiz)**
+
+<br>
+<br>
+
 ## Technologies Used
 
 <br>
@@ -254,6 +288,10 @@ As shown in the flowchart, the original order of some functions has been changed
 * [Colorama](https://pypi.org/project/colorama/) library was used to apply color to the terminal text.
 
 * [Ascrii Art](https://www.asciiart.eu/) was used for the welcome logo
+
+<br>
+
+**[Back to top ⇧](#swimming-quiz)**
 
 <br>
 <br>
@@ -296,6 +334,10 @@ As shown in the flowchart, the original order of some functions has been changed
     - At the end of the quiz, the user has the option to say yes if they would like to play again. Once they reply with Yes, it will bring them back to the menu and they can select from the 4 options available.
 
 <br>
+
+**[Back to top ⇧](#swimming-quiz)**
+
+<br>
 <br>
 
 ### Code Validation
@@ -307,6 +349,10 @@ The [PEP8 online check](https://pep8ci.herokuapp.com/) was used throughout the d
 <br>
 
 ![PEP8 Code Validation](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682598758/Python_Linter_results_o0rlya.png)
+
+<br>
+
+**[Back to top ⇧](#swimming-quiz)**
 
 <br>
 <br>
@@ -344,10 +390,10 @@ The [PEP8 online check](https://pep8ci.herokuapp.com/) was used throughout the d
 </table>
 
 <br>
-<br>
 
 [Back to top ⇧](#swimming-quiz)
 
+<br>
 <br>
 
 ## Deployment
@@ -421,3 +467,22 @@ The live link can be found [here]()
 <br>
 
 [ASCII-Generator](https://ascii-generator.site/) was used for the welcome logo
+
+<br>
+
+**[Back to top ⇧](#swimming-quiz)**
+
+<br>
+<br>
+
+## Acknowledgements
+
+<hr>
+<br>
+
+This project was developed and designed as a Portfolio 3 Project for Full Stack Software Developer Diploma course at the [Code Institute](https://codeinstitute.net/). I would like to thank my mentor Marcel Mulders for his invaluable feedback and guidance, our facilitator Chris Quinn, the Slack community, and all at the Code Institute for their help and support. I really enjoyed working on this project.
+
+<br>
+<br>
+
+**[Back to top ⇧](#swimming-quiz)**
