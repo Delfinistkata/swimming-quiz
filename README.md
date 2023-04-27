@@ -25,6 +25,7 @@ The swimming quiz is a test of knowledge and proficiency in various aspects of s
     1. [Testing User Stories](#testing-user-stories)
     2. [Code Validation](#code-validation)
     3. [Manual Testing](#manual-testing)
+5. [Deployment](#deployment)
 
 
 
@@ -339,3 +340,45 @@ The [PEP8 online check](https://pep8ci.herokuapp.com/) was used throughout the d
         <td>Keep running or exit the program</td>
         <td>Pass</td>
     </tr>
+</table>
+
+<br>
+<br>
+
+[Back to top ⇧](#swimming-quiz)
+
+<br>
+
+## Deployment
+
+<br>
+
+- Deployment was done at the start of the project to allow device testing throughout the development process.
+- The application has been deployed using [Heroku](https://id.heroku.com/) by the following steps:
+
+<br>
+<br>
+
+1. Remove un-used imports from run.py file.
+2. In order for input methods to work properly in the deployed mock terminal, add a new line character at the end of the text, inside the input method. 
+3. Create the requirements.txt file and run: `pip3 freeze > requirements.txt` in the console.
+4. Commit changes and push them to GitHub.
+5. Go to the Heroku's website.
+6. From the Heroku dashboard, click on "Create new app".
+7. Enter the "App name" and "Choose a region" before clicking on "Create app".
+8. Go to "Config Vars" under the "Settings" tab.
+9. Click on "Reveal Config Vars" and add the KEY: CREDS and the VALUE stored in creds.json file if needed.
+10. Add the Config Var, KEY: PORT and VALUE: 8000.
+11. Go to "Buildpacks" section and click "Add buildpack".
+12. Select "python" and click "Save changes".
+13. Add "nodejs" buildpack as well using the same process.
+14. Go to "Deployment method", under the "Deploy" tab select "GitHub" and click on "Connect to GitHub".
+15. Go to "Connect to GitHub" section and "Search" the repository to be deployed.
+16. Click "Connect" next the repository name.
+17. Choose "Automatic deploys" or "Manual deploys" to deploy your application.
+
+<br>
+
+[Back to top ⇧](#swimming-quiz)
+
+<br>
