@@ -16,35 +16,44 @@ The swimming quiz is a test of knowledge and proficiency in various aspects of s
 <br>
 
 # Table of Contents
-1. [User Experience (UX)](#user-experience-UX)
-    1. [Project Goals](#project-goals)
-    2. [User Stories](#user-stories)
-    3. [Color Scheme](#color-scheme)
-    4. [Data Model](#data-model)
-    5. [Flowchart](#flowchart)
-2. [Features](#features)
-    1. [Welcome Message and User Input](#welcome-message-and-user-input)
-    2. [Menu](#menu)
-    3. [Results](#results)
-3. [Technologies Used](#technologies-used)
-    1. [Language Used](#language-used)
-    2. [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
-4. [Testing](#testing)
-    1. [Testing User Stories](#testing-user-stories)
-    2. [Code Validation](#code-validation)
-    3. [Manual Testing](#manual-testing)
-5. [Deployment](#deployment)
-6. [Credits](#credits)
-7. [Acknowledgements](#acknowledgements)
+
+## [User Experience UX](<#user-experience-ux-1>)
+1. ### [Project Goals](<#project-goals-1>)
+2. ### [User Stories](<#user-stories-1>)
+3. ### [Color Scheme](#color-scheme-1)
+4. ### [Data Model](#data-model-1)
+5. ### [Flowchart](#flowchart-1)
+
+## [Existing Features](<#existing-features-1>)
+1. ### [Welcome Message and User Input](#welcome-message-and-user-input-1)
+2. ### [Menu](#menu-1)
+3. ### [Results](#results-1)
+
+## [Technologies Used](#technologies-used-1)
+1. ### [Language Used](#language-used-1)
+2. ### [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used-1)
+
+## [Testing](#testing-1)
+1. ### [Testing User Stories](#testing-user-stories-1)
+2. ### [Code Validation](#code-validation-1)
+3. ### [Manual Testing](#manual-testing-1)
+
+## [Deployment](#deployment-1)
+
+## [Credits](#credits-1)
+1. ### [Content](<#content-1>)
+2. ### [Media](<#media-1>)
+
+## [Acknowledgements](#acknowledgements)
 
 <br>
 <br>
 
-## User Experience (UX)
+# User Experience UX
 
 <br>
 
-### Project Goals
+## Project Goals
 
 <br>
 
@@ -63,7 +72,7 @@ The swimming quiz is a test of knowledge and proficiency in various aspects of s
 <br>
 <br>
 
-### User Stories
+## User Stories
 
 <br>
 
@@ -80,7 +89,7 @@ The swimming quiz is a test of knowledge and proficiency in various aspects of s
 <br>
 <br>
 
-### Color Scheme
+## Color Scheme
 
 <br>
 
@@ -101,7 +110,7 @@ in order to make it more intuitive and easier to read.
 <br>
 <br>
 
-### Data Model
+## Data Model
 
 <br>
 
@@ -131,7 +140,7 @@ in order to make it more intuitive and easier to read.
 <br>
 
 
-### Flowchart
+## Flowchart
 
 <br>
 
@@ -152,12 +161,12 @@ As shown in the flowchart, the original order of some functions has been changed
 <br>
 <br>
 
-## Existing Features
+# Existing Features
 
 <br>
 <br>
 
-### Welcome Logo
+## Welcome Logo
 
 <br>
 
@@ -168,7 +177,7 @@ As shown in the flowchart, the original order of some functions has been changed
 <br>
 <br>
 
-### Welcome Message and User Input
+## Welcome Message and User Input
 
 <br>
 
@@ -183,7 +192,7 @@ As shown in the flowchart, the original order of some functions has been changed
 <br>
 <br>
 
-### Menu
+## Menu
 
 <br>
 
@@ -192,9 +201,8 @@ As shown in the flowchart, the original order of some functions has been changed
 - If they select option 1, the rules pop up.
 - If they select option 2, the game starts.
 - If they select option 3, the leaderboard shows up.
-- Only 3 people have played the game so far.
 - The leaderboard shows top 5 scores only.
-- if they select option 0, the game quits.
+- If they select option 0, the game quits.
 
 <br>
 <br>
@@ -203,7 +211,7 @@ As shown in the flowchart, the original order of some functions has been changed
 
 <br>
 
-![menu](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682530127/Project%203%20Swimming%20Quiz/Main_Menu_wixifz.png)
+![menu]()
 
 <br>
 <br>
@@ -248,7 +256,7 @@ As shown in the flowchart, the original order of some functions has been changed
 <br>
 <br>
 
-### Results
+## Results
 
 <br>
 
@@ -298,12 +306,12 @@ As shown in the flowchart, the original order of some functions has been changed
 <br>
 <br>
 
-## Technologies Used
+# Technologies Used
 
 <br>
 <br>
 
-### Language Used
+## Language Used
 
 <br>
 
@@ -311,7 +319,7 @@ As shown in the flowchart, the original order of some functions has been changed
 
 <br>
 
-### Frameworks, Libraries and Programs Used
+## Frameworks, Libraries and Programs Used
 
 <br>
 
@@ -325,7 +333,9 @@ As shown in the flowchart, the original order of some functions has been changed
 
 * [Colorama](https://pypi.org/project/colorama/) library was used to apply color to the terminal text.
 
-* [Ascrii Art](https://www.asciiart.eu/) was used for the welcome logo
+* [Ascrii Art](https://www.asciiart.eu/) was used for the welcome logo.
+
+* [Responsive Design Checker](https://www.responsivedesignchecker.com/) was used to generate mockup imagery.
 
 <br>
 
@@ -334,11 +344,11 @@ As shown in the flowchart, the original order of some functions has been changed
 <br>
 <br>
 
-## Testing
+# Testing
 
 <br>
 
-### Testing User Stories
+## Testing User Stories
 
 <br>
 
@@ -378,7 +388,7 @@ As shown in the flowchart, the original order of some functions has been changed
 <br>
 <br>
 
-### Code Validation
+## Code Validation
 
 <br>
 
@@ -395,7 +405,7 @@ The [PEP8 online check](https://pep8ci.herokuapp.com/) was used throughout the d
 <br>
 <br>
 
-### Manual Testing
+## Manual Testing
 
 <br>
 
@@ -434,7 +444,7 @@ The [PEP8 online check](https://pep8ci.herokuapp.com/) was used throughout the d
 <br>
 <br>
 
-## Deployment
+# Deployment
 
 <br>
 
@@ -472,17 +482,17 @@ The live link can be found [here]()
 
 <br>
 
-## Credits
+# Credits
 
 <br>
 
-### Content
+## Content
 
 <br>
 
-[Stackoverflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) was used for clearing the terminal
+[Stackoverflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) was used for clearing the terminal.
 
-[Programiz](https://www.programiz.com/python-programming/time/sleep) was used for the pause between the questions and loading of the results and the leaderboard
+[Programiz](https://www.programiz.com/python-programming/time/sleep) was used for the pause between the questions and loading of the results and the leaderboard.
 
 [Youtube](https://www.youtube.com/watch?v=wVXYqHuWC_s&t=409s) was used for the importing of the data from Google sheets.
 
@@ -490,21 +500,25 @@ The live link can be found [here]()
 
 [Youtube](https://www.youtube.com/watch?v=63nw00JqHo0) was used for creating the layout of the menu.
 
-[We Love Quizzes](https://www.welovequizzes.com/swimming-quiz-question-and-answers/) was used for the questions in the game
+[We Love Quizzes](https://www.welovequizzes.com/swimming-quiz-question-and-answers/) was used for the questions in the game.
 
 [Readme.md](https://github.com/josswe26/macro-calculator/blob/main/README.md) was used for some ideas.
 
-[Coudinary](https://cloudinary.com/) : Used to store the screenshots in the Readme file.
+[Coudinary](https://cloudinary.com/) : was used to store the screenshots in the Readme file.
 
-[Colorama](https://pypi.org/project/colorama/) was used for the colour of the text in the game
+[Colorama](https://pypi.org/project/colorama/) was used for the colour of the text in the game.
+
+[Responsive Design Checker](https://www.responsivedesignchecker.com/) was used to generate mockup imagery.
+
+[Lucid](https://www.lucid.app) was used for the flowchart of the game.
 
 <br>
 
-### Media
+## Media
 
 <br>
 
-[ASCII-Generator](https://ascii-generator.site/) was used for the welcome logo
+[ASCII-Generator](https://ascii-generator.site/) was used for the welcome logo.
 
 <br>
 
