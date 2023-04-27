@@ -211,7 +211,7 @@ As shown in the flowchart, the original order of some functions has been changed
 
 <br>
 
-![menu]()
+![menu](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682530127/Project%203%20Swimming%20Quiz/Main_Menu_wixifz.png)
 
 <br>
 <br>
@@ -238,7 +238,7 @@ As shown in the flowchart, the original order of some functions has been changed
 
 <br>
 
-![option3](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682530628/Project%203%20Swimming%20Quiz/leaderboard_thobcg.png)
+![option3](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682611164/Project%203%20Swimming%20Quiz/leaderboard11_gxsmjr.png)
 
 <br>
 <br>
