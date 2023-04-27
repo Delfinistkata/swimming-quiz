@@ -98,8 +98,10 @@ in order to make it more intuitive and easier to read.
 
 * Wrong answers are in red colour.
 * Correct answers are in green colour.
+* Invalid inputs/options are in red colour.
 * The logo of the game is in blue with white background colour.
 * Messages are displayed in the default terminal color.
+* Updating the Google sheet message at the end of the game is in green colour.
 * The feedback at the end of the game is displayed with a different colours depending on the % the user gets at the end. 
     The colours used for the different messages are: Cyan, Green, Yellow, Blue and Magenta.
 
@@ -474,7 +476,7 @@ The [PEP8 online check](https://pep8ci.herokuapp.com/) was used throughout the d
 
 <br>
 
-The live link can be found [here]()
+The live link can be found [here](https://swimming-quiz.herokuapp.com/)
 
 <br>
 
