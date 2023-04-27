@@ -13,7 +13,8 @@ The swimming quiz is a test of knowledge and proficiency in various aspects of s
     1. [Project Goals](#project-goals)
     2. [User Stories](#user-stories)
     3. [Color Scheme](#color-scheme)
-    4. [Flowchart](#flowchart)
+    4. [Data Model](#data-model)
+    5. [Flowchart](#flowchart)
 2. [Features](#features)
     1. [Welcome Message and User Input](#welcome-message-and-user-input)
     2. [Menu](#menu)
@@ -92,6 +93,36 @@ in order to make it more intuitive and easier to read.
 
 <br>
 <br>
+
+### Data Model
+
+<br>
+
+- The check_answer() function checks if the selected answer is correct, compares it to the correct answer, and returns either 1 or 0.
+
+- The new_game() function starts a new game, displays each question in the game and the possible answers, prompts the user for the correct answer, and stores the user's guesses.
+
+- The your_guesses variable is a list that will store the user's guesses for each question.
+
+- The correct_guesses variable keeps track of how many questions the user answered correctly.
+
+- The num_question variable is an integer that keeps track of the current question number.
+
+- The questions are stored in a dictionary and the optional answers are stored in a list, which means that more questions can be added to this quiz in the future along with the optional answers
+
+- The show_score() function displays the user's score and their guesses for each question.
+
+- The import_results_worksheet() function imports the data from the "total_score" sheet using the get_all_values() method of the worksheet object of the SHEET object.
+
+- The export_results_worksheet() function exports the user's name and score to a Google Sheets document after each game.
+
+<br>
+
+**[Back to top ⇧](#swimming-quiz)**
+
+<br>
+<br>
+
 
 ### Flowchart
 
