@@ -25,6 +25,8 @@ SHEET = GSPREAD_CLIENT.open('score_board')
 
 NAME = ''
 
+# Code: https://stackoverflow.com/questions/2084508/clear-terminal-in-python
+
 
 def clear_board():
     '''
@@ -293,6 +295,7 @@ questions = {
 
 # Optional answers for the quiz
 
+
 choices = [
     ["A. A pull", "B. A kick", "C. A stroke"],
     ["A. 3", "B. 4", "C. 5"],
@@ -313,6 +316,8 @@ choices = [
 
 
 # Code from: https://www.youtube.com/watch?v=63nw00JqHo0
+
+
 def menu():
     '''
     A menu with three options for the player to choose from

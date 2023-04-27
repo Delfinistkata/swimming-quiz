@@ -26,6 +26,7 @@ The swimming quiz is a test of knowledge and proficiency in various aspects of s
     2. [Code Validation](#code-validation)
     3. [Manual Testing](#manual-testing)
 5. [Deployment](#deployment)
+6. [Credits](#credits)
 
 
 
@@ -379,6 +380,44 @@ The [PEP8 online check](https://pep8ci.herokuapp.com/) was used throughout the d
 
 <br>
 
+The live link can be found [here]()
+
+<br>
+
 [Back to top ⇧](#swimming-quiz)
 
 <br>
+
+## Credits
+
+<br>
+
+### Content
+
+<br>
+
+[Stackoverflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) was used for clearing the terminal
+
+[Programiz](https://www.programiz.com/python-programming/time/sleep) was used for the pause between the questions and loading of the results and the leaderboard
+
+[Youtube](https://www.youtube.com/watch?v=wVXYqHuWC_s&t=409s) was used for the importing of the data from Google sheets.
+
+[Youtube](https://www.youtube.com/watch?v=9xmfi4kKMPM) was used for exporting of the data to Google sheets.
+
+[Youtube](https://www.youtube.com/watch?v=63nw00JqHo0) was used for creating the layout of the menu.
+
+[We Love Quizzes](https://www.welovequizzes.com/swimming-quiz-question-and-answers/) was used for the questions in the game
+
+[Readme.md](https://github.com/josswe26/macro-calculator/blob/main/README.md) was used for some ideas.
+
+[Coudinary](https://cloudinary.com/) : Used to store the screenshots in the Readme file.
+
+[Colorama](https://pypi.org/project/colorama/) was used for the colour of the text in the game
+
+<br>
+
+### Media
+
+<br>
+
+[ASCII-Generator](https://ascii-generator.site/) was used for the welcome logo
