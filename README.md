@@ -15,7 +15,7 @@ The swimming quiz is a test of knowledge and proficiency in various aspects of s
 <br>
 <br>
 
-The live link can be found [here]()
+The live link can be found [here](https://swimming-quiz.herokuapp.com/)
 
 <br>
 <br>
@@ -522,7 +522,7 @@ The [PEP8 online check](https://pep8ci.herokuapp.com/) was used throughout the d
 
 <br>
 
-The live link can be found [here]()
+The live link can be found [here](https://swimming-quiz.herokuapp.com/)
 
 <br>
 
