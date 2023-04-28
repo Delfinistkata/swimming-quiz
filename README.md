@@ -295,7 +295,7 @@ As shown in the flowchart, the original order of some functions has been changed
 
 - Results:
 
-    As a user I want to clearly see my score at the end of the quiz.
+    * As a user I want to clearly see my score at the end of the quiz.
 
 <br>
 
@@ -306,7 +306,7 @@ As shown in the flowchart, the original order of some functions has been changed
 
 - Score Worksheet:
 
-    As a user I want to know if my name and score has been recorded.
+    * As a user I want to know if my name and score has been recorded.
 
 <br>
 
@@ -317,7 +317,7 @@ As shown in the flowchart, the original order of some functions has been changed
 
 - Question:
 
-    As a user I want to be able to easily repeat the quiz if I want to try again.
+    * As a user I want to be able to easily repeat the quiz if I want to try again.
 
 <br>
 
@@ -356,6 +356,10 @@ As shown in the flowchart, the original order of some functions has been changed
 * [PEP8 online check](https://pep8ci.herokuapp.com/) was used to validate the Python code.
 
 * [Colorama](https://pypi.org/project/colorama/) library was used to apply color to the terminal text.
+
+* [Gspread](https://docs.gspread.org/en/v5.7.1/) module was used for Google sheets.
+
+* [Time](https://www.programiz.com/python-programming/time) module was used for delaying the output.
 
 * [Ascrii Art](https://www.asciiart.eu/) was used for the welcome logo.
 
