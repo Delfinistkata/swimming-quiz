@@ -463,13 +463,19 @@ The [PEP8 online check](https://pep8ci.herokuapp.com/) was used throughout the d
         <td>Pass</td>
     </tr>
     <tr>
+        <td>Try again Input</td>
+        <td>Validate if invalid value</td>
+        <td><a href="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682697144/Project%203%20Swimming%20Quiz/yesnoinput_ijnqlu.png"><img src="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682697144/Project%203%20Swimming%20Quiz/yesnoinput_ijnqlu.png" alt="try-again"></a></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
         <td rowspan=4>Restart the game</td>
         <td rowspan=4>Keep running or exit the program</td>
         <td><a href="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682694285/Project%203%20Swimming%20Quiz/yn_whyxxx.png"><img src="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682694285/Project%203%20Swimming%20Quiz/yn_whyxxx.png" alt="yes/y"></a></td>
+        <td rowspan=4>Pass</td>
     </tr>
     <tr>
         <td><a href="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682530127/Project%203%20Swimming%20Quiz/Main_Menu_wixifz.png"><img src="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682530127/Project%203%20Swimming%20Quiz/Main_Menu_wixifz.png" alt="menu"></a></td>
-        <td rowspan=2>Pass</td>
     </tr>
     <tr>
         <td><a href="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682695110/Project%203%20Swimming%20Quiz/noyes_riar2k.png"><img src="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682695110/Project%203%20Swimming%20Quiz/noyes_riar2k.png" alt="no/n"></a></td>
