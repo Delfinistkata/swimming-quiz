@@ -5,7 +5,7 @@
 <br>
 <br>
 
-![responsive-pic](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682607812/amiresponsive_bf7xm6.png)
+![responsive-pic](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682690487/Project%203%20Swimming%20Quiz/responsivepic_yz5h65.png)
 
 <br>
 <br>
@@ -25,7 +25,7 @@ The live link can be found [here]()
 ## [User Experience UX](<#user-experience-ux-1>)
 1. ### [Project Goals](<#project-goals-1>)
 2. ### [User Stories](<#user-stories-1>)
-3. ### [Color Scheme](#color-scheme-1)
+3. ### [Colour Scheme](#colour-scheme-1)
 4. ### [Data Model](#data-model-1)
 5. ### [Flowchart](#flowchart-1)
 
@@ -67,7 +67,7 @@ The live link can be found [here]()
 * Provide input validation to help the user to input the correct data throughout the quiz.
 * The program should keep running until the user decides otherwise.
 * Provide the user with a fun, engaging and easy to play multiple choice quiz.
-* Provide some visuals with the use of ascrii art and colour to contribute to a positive user experience.
+* Provide some visuals with the use of ASCII art and colour to contribute to a positive user experience.
 * Accurately keep track of and display the user’s score clearly at the end of the quiz. 
 
 <br>
@@ -94,20 +94,20 @@ The live link can be found [here]()
 <br>
 <br>
 
-## Color Scheme
+## Colour Scheme
 
 <br>
 
-[Colorama](https://pypi.org/project/colorama/) has been used to apply color to the terminal text and the logo,
+[Colorama](https://pypi.org/project/colorama/) has been used to apply colour to the terminal text and the logo,
 in order to make it more intuitive and easier to read.
 
 * Wrong answers are in red colour.
 * Correct answers are in green colour.
 * Invalid inputs/options are in red colour.
 * The logo of the game is in blue with white background colour.
-* Messages are displayed in the default terminal color.
+* Messages are displayed in the default terminal colour.
 * Updating the Google sheet message at the end of the game is in green colour.
-* The feedback at the end of the game is displayed with a different colours depending on the % the user gets at the end. 
+* The feedback at the end of the game is displayed with different colours depending on the % the user gets at the end. 
     The colours used for the different messages are: Cyan, Green, Yellow, Blue and Magenta.
 
 <br>
@@ -355,7 +355,7 @@ As shown in the flowchart, the original order of some functions has been changed
 
 * [PEP8 online check](https://pep8ci.herokuapp.com/) was used to validate the Python code.
 
-* [Colorama](https://pypi.org/project/colorama/) library was used to apply color to the terminal text.
+* [Colorama](https://pypi.org/project/colorama/) library was used to apply colour to the terminal text.
 
 * [Gspread](https://docs.gspread.org/en/v5.7.1/) module was used for Google sheets.
 
@@ -363,7 +363,7 @@ As shown in the flowchart, the original order of some functions has been changed
 
 * [Ascrii Art](https://www.asciiart.eu/) was used for the welcome logo.
 
-* [Responsive Design Checker](https://www.responsivedesignchecker.com/) was used to generate mockup imagery.
+* [Responsive Design Checker](https://www.responsivedesignchecker.com/) was used to generate mock-up imagery.
 
 <br>
 
@@ -450,7 +450,7 @@ The [PEP8 online check](https://pep8ci.herokuapp.com/) was used throughout the d
     </tr>
     <tr>
         <td>Enter Input</td>
-        <td>Validate if value is a empty</td>
+        <td>Validate if value is empty</td>
         <td>Pass</td>
     </tr>
     <tr>
@@ -482,7 +482,7 @@ The [PEP8 online check](https://pep8ci.herokuapp.com/) was used throughout the d
 <br>
 <br>
 
-1. Remove un-used imports from run.py file.
+1. Remove unused imports from run.py file.
 2. In order for input methods to work properly in the deployed mock terminal, add a new line character at the end of the text, inside the input method. 
 3. Create the requirements.txt file and run: `pip3 freeze > requirements.txt` in the console.
 4. Commit changes and push them to GitHub.
@@ -497,7 +497,7 @@ The [PEP8 online check](https://pep8ci.herokuapp.com/) was used throughout the d
 13. Add "nodejs" buildpack as well using the same process.
 14. Go to "Deployment method", under the "Deploy" tab select "GitHub" and click on "Connect to GitHub".
 15. Go to "Connect to GitHub" section and "Search" the repository to be deployed.
-16. Click "Connect" next the repository name.
+16. Click "Connect" next to the repository name.
 17. Choose "Automatic deploys" or "Manual deploys" to deploy your application.
 
 <br>
@@ -536,7 +536,7 @@ The live link can be found [here]()
 
 [Colorama](https://pypi.org/project/colorama/) was used for the colour of the text in the game.
 
-[Responsive Design Checker](https://www.responsivedesignchecker.com/) was used to generate mockup imagery.
+[Responsive Design Checker](https://www.responsivedesignchecker.com/) was used to generate mock-up imagery.
 
 [Lucid](https://www.lucid.app) was used for the flowchart of the game.
 
