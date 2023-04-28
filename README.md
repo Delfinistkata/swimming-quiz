@@ -15,6 +15,11 @@ The swimming quiz is a test of knowledge and proficiency in various aspects of s
 <br>
 <br>
 
+The live link can be found [here]()
+
+<br>
+<br>
+
 # Table of Contents
 
 ## [User Experience UX](<#user-experience-ux-1>)
@@ -211,6 +216,8 @@ As shown in the flowchart, the original order of some functions has been changed
 
 - Menu:
 
+    * As a user I want to clearly see and use the options from the menu.
+
 <br>
 
 ![menu](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682530127/Project%203%20Swimming%20Quiz/Main_Menu_wixifz.png)
@@ -219,6 +226,8 @@ As shown in the flowchart, the original order of some functions has been changed
 <br>
 
 - Option 1:
+
+    * As a user I want clear instructions on how to use the quiz.
 
 <br>
 
@@ -229,6 +238,9 @@ As shown in the flowchart, the original order of some functions has been changed
 
 - Option 2:
 
+    * As a user I want to test my knowledge of swimming.
+    * As a user I want to be able to read the application output clearly.
+
 <br>
 
 ![option2](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682530356/Project%203%20Swimming%20Quiz/the_quiz_lysudn.png)
@@ -238,6 +250,8 @@ As shown in the flowchart, the original order of some functions has been changed
 
 - Option 3:
 
+    * As a user I want to clearly see the leaderboard.
+
 <br>
 
 ![option3](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682611164/Project%203%20Swimming%20Quiz/leaderboard11_gxsmjr.png)
@@ -246,6 +260,8 @@ As shown in the flowchart, the original order of some functions has been changed
 <br>
 
 - Option 0:
+
+    * As a user I want to quit the game.
 
 <br>
 
@@ -279,6 +295,8 @@ As shown in the flowchart, the original order of some functions has been changed
 
 - Results:
 
+    As a user I want to clearly see my score at the end of the quiz.
+
 <br>
 
 ![results](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682531050/Project%203%20Swimming%20Quiz/results_kak0s7.png)
@@ -288,6 +306,8 @@ As shown in the flowchart, the original order of some functions has been changed
 
 - Score Worksheet:
 
+    As a user I want to know if my name and score has been recorded.
+
 <br>
 
 ![exporting](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682531189/Project%203%20Swimming%20Quiz/exporting_to_google_sheets_pn7zne.png)
@@ -296,6 +316,8 @@ As shown in the flowchart, the original order of some functions has been changed
 <br>
 
 - Question:
+
+    As a user I want to be able to easily repeat the quiz if I want to try again.
 
 <br>
 
