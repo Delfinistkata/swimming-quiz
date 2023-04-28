@@ -441,27 +441,41 @@ The [PEP8 online check](https://pep8ci.herokuapp.com/) was used throughout the d
     <tr>
         <th>Feature</th>
         <th>Outcome</th>
+        <th>Example</th>
         <th>Pass/Fail</th>
     </tr>
     <tr>
         <td>Name Input</td>
         <td>Validate if value is empty</td>
+        <td><a href="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682690875/Project%203%20Swimming%20Quiz/nameinput_jdsjtg.png"><img src="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682690875/Project%203%20Swimming%20Quiz/nameinput_jdsjtg.png" alt="name"></a></td>
         <td>Pass</td>
     </tr>
     <tr>
         <td>Enter Input</td>
-        <td>Validate if value is empty</td>
+        <td>Validate if invalid value</td>
+        <td><a href="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682692271/Project%203%20Swimming%20Quizenterpress_smq4ed.png"><img src="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682692271/Project%203%20Swimming%20Quiz/enterpress_smq4ed.png" alt="enter"></a></td>
         <td>Pass</td>
     </tr>
     <tr>
         <td>Question Input</td>
         <td>Validate if invalid value</td>
+        <td><a href="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682693152/Project%203%20Swimming%20Quiz/questionsinput_jzm9ml.png"><img src="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682693152/Project%203%20Swimming%20Quiz/questionsinput_jzm9ml.png" alt="question"></a></td>
         <td>Pass</td>
     </tr>
     <tr>
-        <td>Restart the game</td>
-        <td>Keep running or exit the program</td>
-        <td>Pass</td>
+        <td rowspan=4>Restart the game</td>
+        <td rowspan=4>Keep running or exit the program</td>
+        <td><a href="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682694285/Project%203%20Swimming%20Quiz/yn_whyxxx.png"><img src="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682694285/Project%203%20Swimming%20Quiz/yn_whyxxx.png" alt="yes/y"></a></td>
+    </tr>
+    <tr>
+        <td><a href="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682530127/Project%203%20Swimming%20Quiz/Main_Menu_wixifz.png"><img src="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682530127/Project%203%20Swimming%20Quiz/Main_Menu_wixifz.png" alt="menu"></a></td>
+        <td rowspan=2>Pass</td>
+    </tr>
+    <tr>
+        <td><a href="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682695110/Project%203%20Swimming%20Quiz/noyes_riar2k.png"><img src="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682695110/Project%203%20Swimming%20Quiz/noyes_riar2k.png" alt="no/n"></a></td>
+    </tr>
+    <tr>
+        <td><a href="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682530755/Project%203%20Swimming%20Quiz/press_0_rjxllm.png"><img src="https://res.cloudinary.com/doyc0uqcs/image/upload/v1682530755/Project%203%20Swimming%20Quiz/press_0_rjxllm.png" alt="quit"></a></td>
     </tr>
 </table>
 
