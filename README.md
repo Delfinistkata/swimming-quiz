@@ -174,7 +174,7 @@ As shown in the flowchart, the original order of some functions has been changed
 
 - The welcome logo when you start the game.
 
-![logo](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682529373/Project%203%20Swimming%20Quiz/swimming_Logo_bzk6yu.png) 
+![logo](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682687073/Project%203%20Swimming%20Quiz/welcome_logo_1_ksuq84.png) 
 
 <br>
 <br>
@@ -476,7 +476,7 @@ The [PEP8 online check](https://pep8ci.herokuapp.com/) was used throughout the d
 
 <br>
 
-The live link can be found [here](https://swimming-quiz.herokuapp.com/)
+The live link can be found [here]()
 
 <br>
 
