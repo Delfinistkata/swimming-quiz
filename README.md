@@ -424,7 +424,7 @@ The [PEP8 online check](https://pep8ci.herokuapp.com/) was used throughout the d
 
 <br>
 
-![PEP8 Code Validation](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682598758/Python_Linter_results_o0rlya.png)
+![PEP8 Code Validation](https://res.cloudinary.com/doyc0uqcs/image/upload/v1682689027/Project%203%20Swimming%20Quiz/validation_CI_ko06qk.png)
 
 <br>
 
