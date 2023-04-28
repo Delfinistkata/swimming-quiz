@@ -9,7 +9,7 @@ import os
 import gspread
 from google.oauth2.service_account import Credentials
 import colorama
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 colorama.init(autoreset=True)
 
 SCOPE = [
@@ -40,8 +40,8 @@ def welcome_message():
     Display the welcome logo and message
     '''
     global NAME
-    print(Style.BRIGHT + Fore.BLUE + Back.WHITE + r'''
-    ___           _                _        __ _         ___          _
+    print(Style.BRIGHT + Fore.BLUE + r'''
+    _____         ___              ___       ____        _____       ___
     / __| _ __ __ (_) _ __   _ __  (_) _ _  / _` |       / _ \  _  _ (_) ___
     \__ \ \ V  V /| || '  \ | '  \ | || ' \ \__. |      | (_) || || || ||_ /
     |___/  \_/\_/ |_||_|_|_||_|_|_||_||_||_||___/        \__\_\ \_._||_|/__|
@@ -50,22 +50,22 @@ def welcome_message():
 
     print()
 
-    print(Style.BRIGHT + Fore.BLUE + Back.WHITE + r'''
-        .-;'`  `'-.
+    print(Style.BRIGHT + Fore.BLUE + r'''
+    __.-;'`  `'-.
     /   \       `\_..
     |-"``;-.      || `\
     \    '.`-.   /|  /
-        `-.   '. \  |-'`
+    `  `-.   '. \  |-'`
         `-.  ) \ |
-            /` /  / |
+        /    /` /  / |
         / /`   | |
         / (     ) /
-        _(   `-,-'_/
+    _ _/ _(   `-,-'_/
     /  `""""";`
     `---..---'
         //\\
         //---0
-    _//_____
+    _//_________
     jgs        `\
                 (~^~_-~^-~^_~^~^-~^_~-^~_^~-^-~^~^_~^~-^~^~^~-^~_
                 ''' + Style.RESET_ALL)
